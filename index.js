@@ -4,7 +4,6 @@ const url = "mongodb+srv://client:client123@cluster0.jqa6rrt.mongodb.net/?retryW
 const cors = require("cors")
 const rout = require('./controller/route');
 require('dotenv').config();
-const PORT = process.env.PORT || 7000
 
 
 mongoose.connect(url).then(()=>{
@@ -17,4 +16,4 @@ app.use(cors());
 app.use("/", rout);
 
 
-app.listen(PORT, () => console.log("SUCCESSFULLY"))
+app.listen(process.env.PORT || 7000, () => console.log("SUCCESSFULLY"))
