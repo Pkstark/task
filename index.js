@@ -4,7 +4,7 @@ const url = "mongodb+srv://client:client123@cluster0.jqa6rrt.mongodb.net/?retryW
 const cors = require("cors")
 const rout = require('./controller/route');
 require("dotenv").config();
-const PORT = process.env.NODE_ENV || 7000
+const PORT = process.env.PORT || 7000
 
 mongoose.connect(url).then(()=>{
     console.log("Db Connected Suessfully")
