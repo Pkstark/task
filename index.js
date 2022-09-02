@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const url = "mongodb+srv://client:client123@cluster0.jqa6rrt.mongodb.net/?retryWrites=true&w=majority"
 const cors = require("cors")
 const rout = require('./controller/route');
-const PORT = process.env.PORT || 7000
+require("dotenv").config();
+const PORT = process.env.NODE_ENV || 7000
 
 mongoose.connect(url).then(()=>{
     console.log("Db Connected Suessfully")
