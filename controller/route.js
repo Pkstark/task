@@ -108,6 +108,9 @@ rout.post("/getdata", async (req,res) => {
     }
 })
 
+rout.get("/", (req,res) => {
+    res.send("connected")
+})
 
 rout.post("/userupdate/:id", async (req,res) => {
     try {
